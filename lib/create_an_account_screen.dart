@@ -38,6 +38,7 @@ class _CreateAccountScreenState extends State<CreateAccountScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       //backgroundColor: const Color(0xFFF3F6FF),
+      backgroundColor: const Color(0xFFF3F6FF),
 
       body: SafeArea(
         child: Center(
