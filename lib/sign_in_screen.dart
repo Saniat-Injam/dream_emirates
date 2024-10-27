@@ -21,14 +21,20 @@ class SignInScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: const Color(0xFFF3F6FF), // Light background color
+        backgroundColor: const Color(0xFFF3F6FF),
+        // Light background color
 
-        body: Padding(
+        body: Container(
           padding: const EdgeInsets.symmetric(horizontal: 20.0),
+          decoration: ShapeDecoration(
+              color: const Color(0xFFF3F6FF),
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(40))),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               const Spacer(),
+
               // Logo
               Container(
                 height: 77.50,
@@ -44,6 +50,7 @@ class SignInScreen extends StatelessWidget {
               ),
               const SizedBox(height: 40),
 
+              // Sign in to your account
               const Text(
                 'Sign in to your account',
                 textAlign: TextAlign.center,
