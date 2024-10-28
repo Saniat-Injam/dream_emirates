@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:dream_emirates/custom_widgets/app_buttons.dart';
 
 void main() {
   runApp(const MyApp());
@@ -304,10 +305,9 @@ class VirtualBuyScreenState extends State<VirtualBuyScreen> {
               //     ],
               //   ),
               // ),
+
+              // Rate
               Container(
-                // width: 343,
-                // height: 66,
-                //clipBehavior: Clip.antiAlias,
                 decoration: const BoxDecoration(),
                 child: Column(
                   //mainAxisSize: MainAxisSize.min,
@@ -359,12 +359,8 @@ class VirtualBuyScreenState extends State<VirtualBuyScreen> {
 
               // Executed rate
               Container(
-                //width: 343,
-                //height: 66,
-                //clipBehavior: Clip.antiAlias,
                 decoration: const BoxDecoration(),
                 child: Column(
-                  mainAxisSize: MainAxisSize.min,
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -373,12 +369,11 @@ class VirtualBuyScreenState extends State<VirtualBuyScreen> {
                       style: TextStyle(
                         color: Color(0xFF252A31),
                         fontSize: 14,
-                        //fontFamily: 'Inter',
                         fontWeight: FontWeight.w400,
                         height: 0.10,
                       ),
                     ),
-                    const SizedBox(height: 15),
+                    const SizedBox(height: 16),
                     Container(
                       width: double.infinity,
                       padding: const EdgeInsets.all(12),
@@ -389,7 +384,6 @@ class VirtualBuyScreenState extends State<VirtualBuyScreen> {
                         ),
                       ),
                       child: const Row(
-                        mainAxisSize: MainAxisSize.min,
                         mainAxisAlignment: MainAxisAlignment.start,
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
@@ -398,7 +392,6 @@ class VirtualBuyScreenState extends State<VirtualBuyScreen> {
                             style: TextStyle(
                               color: Color(0xFF111111),
                               fontSize: 15,
-                              //fontFamily: 'Inter',
                               fontWeight: FontWeight.w700,
                               height: 0,
                             ),
@@ -409,43 +402,57 @@ class VirtualBuyScreenState extends State<VirtualBuyScreen> {
                   ],
                 ),
               ),
-
               const SizedBox(height: 20),
 
               //Confirm Button
-
-              SizedBox(
-                width: double.infinity,
-                child: ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.black,
-                      padding: const EdgeInsets.symmetric(
-                          horizontal: 16, vertical: 12),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(12),
-                      )
-                      //textStyle: const TextStyle(fontSize: 18),
-                      ),
-                  onPressed: () {},
-                  child: const Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text(
-                        'Confirm',
-                        style: TextStyle(
-                          color: Color(0xFFFFFFFF),
-                          fontSize: 18,
-                        ),
-                      ),
-                      SizedBox(width: 12),
-                      Icon(
-                        Icons.arrow_forward_ios,
-                        color: Color(0xFFFFFFFF),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
+              // SizedBox(
+              //   width: double.infinity,
+              //   child: ElevatedButton(
+              //     style: ElevatedButton.styleFrom(
+              //         backgroundColor: Colors.black,
+              //         padding: const EdgeInsets.symmetric(
+              //           horizontal: 16,
+              //           vertical: 12,
+              //         ),
+              //         shape: RoundedRectangleBorder(
+              //           borderRadius: BorderRadius.circular(12),
+              //         )
+              //         //textStyle: const TextStyle(fontSize: 18),
+              //         ),
+              //     onPressed: () {},
+              //     child: const Row(
+              //       mainAxisAlignment: MainAxisAlignment.center,
+              //       children: [
+              //         Text(
+              //           'Confirm',
+              //           style: TextStyle(
+              //             color: Color(0xFFFFFFFF),
+              //             fontSize: 18,
+              //           ),
+              //         ),
+              //         SizedBox(width: 12),
+              //         Icon(
+              //           Icons.arrow_forward_ios,
+              //           color: Color(0xFFFFFFFF),
+              //         ),
+              //       ],
+              //     ),
+              //   ),
+              // ),
+              const AppButtons(
+                backgroundColor: Color(0xFF111111),
+                borderColor: Color(0xFF111111),
+                borderWidth: 1,
+                borderRadius: 12,
+                // Text
+                text: "Confirm",
+                textColor: Colors.white,
+                fontSize: 15,
+                fontWeight: 400,
+                // padding
+                paddingHorizontal: 16,
+                paddingVertical: 12,
+              )
             ],
           ),
         ),

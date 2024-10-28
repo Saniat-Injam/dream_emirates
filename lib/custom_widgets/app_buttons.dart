@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 
 class AppButtons extends StatelessWidget {
   final double? width;
-  final double height;
+  final double? height;
   final Color backgroundColor;
   final Color borderColor;
   final double borderWidth;
@@ -14,11 +14,14 @@ class AppButtons extends StatelessWidget {
   final double fontWeight;
   //icon
   final IconData? icon;
+  //padding
+  final double paddingHorizontal;
+  final double paddingVertical;
 
   const AppButtons({
     super.key,
     this.width,
-    required this.height,
+    this.height,
     required this.backgroundColor,
     required this.borderColor,
     required this.borderWidth,
@@ -29,7 +32,10 @@ class AppButtons extends StatelessWidget {
     required this.fontSize,
     required this.fontWeight,
     //icon
-    required this.icon,
+    this.icon,
+    //padding
+    required this.paddingHorizontal,
+    required this.paddingVertical,
   });
 
   @override
@@ -37,13 +43,12 @@ class AppButtons extends StatelessWidget {
     return Container(
       width: width,
       height: height,
+      padding: EdgeInsets.symmetric(
+          horizontal: paddingHorizontal, vertical: paddingVertical),
       decoration: BoxDecoration(
         color: backgroundColor,
         borderRadius: BorderRadius.circular(borderRadius),
-        border: Border.all(
-          color: borderColor,
-          width: borderWidth,
-        ),
+        border: Border.all(color: borderColor, width: borderWidth),
       ),
       child: Center(
         child: Text(
