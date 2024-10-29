@@ -57,8 +57,7 @@ class VirtualBuyScreenState extends State<VirtualBuyScreen> {
             children: [
               // Row with Info and Confirm checkboxes
               Container(
-                //width: 390,
-
+                color: Colors.white,
                 height: 43,
                 padding: const EdgeInsets.only(
                     top: 10, left: 16, right: 10, bottom: 9),
@@ -125,7 +124,7 @@ class VirtualBuyScreenState extends State<VirtualBuyScreen> {
                 child: Column(
                   children: [
                     Container(
-                      padding: const EdgeInsets.only(left: 12, right: 12),
+                      //padding: const EdgeInsets.symmetric(horizontal: ),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
