@@ -38,24 +38,25 @@ class VirtualBuyScreenState extends State<VirtualBuyScreen> {
 
         // Appbar virtual buy
         appBar: AppBar(
+          toolbarHeight: 131,
           backgroundColor: const Color(0xFFFFFFFF),
           elevation: 0,
           leading: IconButton(
-            icon: const Icon(Icons.arrow_back, color: Colors.black),
+            icon: const Icon(
+              Icons.arrow_back,
+              color: Colors.black,
+            ),
             onPressed: () {},
           ),
-          title: const Text(
-            'Virtual Buy',
-            style: TextStyle(color: Colors.black, fontSize: 18),
-          ),
-          centerTitle: true,
-        ),
-
-        body: Padding(
-          padding: const EdgeInsets.only(left: 16, top: 10, right: 10),
-          child: Column(
+          title: Column(
             children: [
-              // Row with Info and Confirm checkboxes
+              const Text(
+                'Virtual Buy',
+                style: TextStyle(
+                  color: Colors.black,
+                  fontSize: 18,
+                ),
+              ),
               Container(
                 color: Colors.white,
                 height: 43,
@@ -75,19 +76,6 @@ class VirtualBuyScreenState extends State<VirtualBuyScreen> {
                         const Text("Info", style: TextStyle(fontSize: 16)),
                       ],
                     ),
-                    // Container(
-                    //   //width: 155,
-                    //   decoration: const ShapeDecoration(
-                    //     color: Color(0x19111111),
-                    //     shape: RoundedRectangleBorder(
-                    //       side: BorderSide(
-                    //         width: 1,
-                    //         strokeAlign: BorderSide.strokeAlignCenter,
-                    //         color: Color(0x19111111),
-                    //       ),
-                    //     ),
-                    //   ),
-                    // ),
                     Row(
                       children: [
                         Checkbox(
@@ -101,6 +89,50 @@ class VirtualBuyScreenState extends State<VirtualBuyScreen> {
                   ],
                 ),
               ),
+            ],
+          ),
+          centerTitle: true,
+          // actions: [
+          //   // Row with Info and Confirm checkboxes
+          //   Container(
+          //     color: Colors.white,
+          //     height: 43,
+          //     padding: const EdgeInsets.only(
+          //         top: 10, left: 16, right: 10, bottom: 9),
+          //     child: Row(
+          //       mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          //       //crossAxisAlignment: CrossAxisAlignment.center,
+          //       children: [
+          //         Row(
+          //           children: [
+          //             Checkbox(
+          //               value: true,
+          //               onChanged: (bool? value) {},
+          //               activeColor: Colors.black,
+          //             ),
+          //             const Text("Info", style: TextStyle(fontSize: 16)),
+          //           ],
+          //         ),
+          //         Row(
+          //           children: [
+          //             Checkbox(
+          //               value: true,
+          //               onChanged: (bool? value) {},
+          //               activeColor: Colors.black,
+          //             ),
+          //             const Text("Confirm", style: TextStyle(fontSize: 16)),
+          //           ],
+          //         ),
+          //       ],
+          //     ),
+          //   ),
+          // ],
+        ),
+
+        body: Padding(
+          padding: const EdgeInsets.only(left: 16, top: 10, right: 10),
+          child: Column(
+            children: [
               const SizedBox(height: 20),
 
               // Card for Type, Weight and QTY
@@ -219,6 +251,7 @@ class VirtualBuyScreenState extends State<VirtualBuyScreen> {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
+                        // Blue Buy Button
                         Container(
                           height: 24,
                           width: 38,

@@ -77,8 +77,8 @@ class VirtualBuyScreenState extends State<VirtualBuyScreen> {
                   // Divider
                   Expanded(
                     child: Container(
-                      height: 1,
-                      color: Colors.grey[300],
+                      height: 0.5,
+                      color: Colors.grey[400],
                       margin: const EdgeInsets.symmetric(horizontal: 8),
                     ),
                   ),

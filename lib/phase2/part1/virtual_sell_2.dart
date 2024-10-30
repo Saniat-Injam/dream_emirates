@@ -23,6 +23,7 @@ class VirtualSellScreen extends StatefulWidget {
 }
 
 class VirtualSellScreenState extends State<VirtualSellScreen> {
+  int quantity = 12;
   bool isInfoSelected = true;
   bool isConfirmSelected = true;
 
@@ -104,115 +105,175 @@ class VirtualSellScreenState extends State<VirtualSellScreen> {
                 ],
               ),
               const SizedBox(height: 24),
-              // Details container
+              // Card for Type, Weight and QTY
               Container(
-                padding: const EdgeInsets.all(16),
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(12),
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.black.withOpacity(0.1),
-                      spreadRadius: 2,
-                      blurRadius: 5,
+                padding: const EdgeInsets.all(8),
+                decoration: ShapeDecoration(
+                    color: Colors.white.withOpacity(0.8999999761581421),
+                    shape: RoundedRectangleBorder(
+                      side:
+                          const BorderSide(width: 1, color: Color(0xFFE8EDF1)),
+                      borderRadius: BorderRadius.circular(16),
                     ),
-                  ],
-                ),
-                child: const Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    shadows: const [
+                      BoxShadow(
+                        color: Color(0x05000000),
+                        blurRadius: 4,
+                        offset: Offset(0, 4),
+                        spreadRadius: 0,
+                      ),
+                    ]),
+                child: Column(
                   children: [
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          "Type",
-                          style: TextStyle(
-                            color: Colors.grey,
-                            fontSize: 14,
+                    Container(
+                      padding: const EdgeInsets.all(8),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          const Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Opacity(
+                                opacity: 0.50,
+                                child: Text(
+                                  'Type',
+                                  style: TextStyle(
+                                    color: Color(0xFF111111),
+                                    fontSize: 12,
+                                    fontWeight: FontWeight.w400,
+                                    height: 0,
+                                  ),
+                                ),
+                              ),
+                              SizedBox(height: 4),
+                              Text(
+                                'Kilobar',
+                                style: TextStyle(
+                                  color: Color(0xFF111111),
+                                  fontSize: 15,
+                                  fontWeight: FontWeight.w600,
+                                  height: 0,
+                                ),
+                              ),
+                            ],
                           ),
-                        ),
-                        SizedBox(height: 4),
-                        Text(
-                          "Kilobar",
-                          style: TextStyle(
-                            color: Colors.black,
-                            fontSize: 16,
-                            fontWeight: FontWeight.w600,
+                          const Column(
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              Opacity(
+                                opacity: 0.50,
+                                child: Text(
+                                  'Weight',
+                                  style: TextStyle(
+                                    color: Color(0xFF111111),
+                                    fontSize: 12,
+                                    fontWeight: FontWeight.w400,
+                                    height: 0,
+                                  ),
+                                ),
+                              ),
+                              SizedBox(height: 4),
+                              Text(
+                                '162.54gm',
+                                style: TextStyle(
+                                  color: Color(0xFF111111),
+                                  fontSize: 15,
+                                  fontWeight: FontWeight.w600,
+                                  height: 0,
+                                ),
+                              ),
+                            ],
                           ),
-                        ),
-                      ],
-                    ),
-                    Column(
-                      children: [
-                        Text(
-                          "Weight",
-                          style: TextStyle(
-                            color: Colors.grey,
-                            fontSize: 14,
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.end,
+                            children: [
+                              const Opacity(
+                                opacity: 0.50,
+                                child: Text(
+                                  'QTY',
+                                  style: TextStyle(
+                                    color: Color(0xFF111111),
+                                    fontSize: 12,
+                                    fontWeight: FontWeight.w400,
+                                    height: 0,
+                                  ),
+                                ),
+                              ),
+                              const SizedBox(height: 4),
+                              Text(
+                                '$quantity',
+                                style: const TextStyle(
+                                  color: Color(0xFF111111),
+                                  fontSize: 15,
+                                  fontWeight: FontWeight.w600,
+                                  height: 0,
+                                ),
+                              ),
+                            ],
                           ),
-                        ),
-                        SizedBox(height: 4),
-                        Text(
-                          "162.54gm",
-                          style: TextStyle(
-                            color: Colors.black,
-                            fontSize: 16,
-                            fontWeight: FontWeight.w600,
-                          ),
-                        ),
-                      ],
-                    ),
-                    Column(
-                      children: [
-                        Text(
-                          "QTY",
-                          style: TextStyle(
-                            color: Colors.grey,
-                            fontSize: 14,
-                          ),
-                        ),
-                        SizedBox(height: 4),
-                        Text(
-                          "12",
-                          style: TextStyle(
-                            color: Colors.black,
-                            fontSize: 16,
-                            fontWeight: FontWeight.w600,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
-              ),
-              const SizedBox(height: 8),
-              Row(
-                children: [
-                  Container(
-                    padding:
-                        const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
-                    decoration: BoxDecoration(
-                      color: const Color(0xFFFFF2E5),
-                      borderRadius: BorderRadius.circular(12),
-                      border: Border.all(color: const Color(0xFFFFA726)),
-                    ),
-                    child: const Text(
-                      "Sell",
-                      style: TextStyle(
-                        color: Color(0xFFFFA726),
-                        fontWeight: FontWeight.w500,
+                        ],
                       ),
                     ),
-                  ),
-                  const Spacer(),
-                  const Text(
-                    "Jewelry 22K",
-                    style: TextStyle(
-                      color: Colors.grey,
+
+                    // Straight line
+                    const Divider(),
+
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Container(
+                          height: 24,
+                          width: 38,
+                          decoration: BoxDecoration(
+                            color: const Color(0x19EBA413),
+                            borderRadius: BorderRadius.circular(12),
+                            border: Border.all(
+                              width: 0.5,
+                              color: const Color(0xFFBA5D00),
+                            ),
+                          ),
+                          child: const Center(
+                            child: Text(
+                              "Sell",
+                              style: TextStyle(
+                                color: Color(0xFFBA5D00),
+                                fontSize: 12,
+                                fontWeight: FontWeight.w400,
+                                height: 0.11,
+                              ),
+                            ),
+                          ),
+                        ),
+
+                        // ElevatedButton(
+                        //   onPressed: () {},
+                        //   style: ElevatedButton.styleFrom(
+                        //     //backgroundColor: const Color(0x190088FF),
+                        //     side: const BorderSide(color: Colors.blue),
+                        //     shape: RoundedRectangleBorder(
+                        //       borderRadius: BorderRadius.circular(20),
+                        //     ),
+                        //     padding: const EdgeInsets.symmetric(
+                        //         horizontal: 20, vertical: 10),
+                        //   ),
+                        //   child: const Text(
+                        //     'Buy',
+                        //     style: TextStyle(color: Colors.blue),
+                        //   ),
+                        // ),
+                        Text(
+                          'Jewelry 22K',
+                          style: TextStyle(
+                            fontSize: 14,
+                            color: Colors.grey.shade600,
+                          ),
+                        ),
+                      ],
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
+
               const SizedBox(height: 20),
               // Rate display
               const Text("Rate"),
