@@ -17,7 +17,7 @@ class TradeInfoScreenState extends State<TradeInfoScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Pending'),
+        title: const Text('INFO'),
         leading: IconButton(
           icon: const Icon(Icons.arrow_back),
           onPressed: () {},

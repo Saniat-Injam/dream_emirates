@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
           elevation: 0,
           foregroundColor: Colors.black,
         ),
-        body: PendingScreen(),
+        body: const PendingScreen(),
       ),
     );
   }

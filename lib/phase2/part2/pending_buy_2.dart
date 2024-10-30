@@ -8,7 +8,7 @@ class ConfirmScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Pending'),
+        title: const Text('CONFIRM'),
         leading: IconButton(
           icon: const Icon(Icons.arrow_back),
           onPressed: () {

@@ -14,6 +14,7 @@ class AppButtons extends StatelessWidget {
   final double fontWeight;
   //icon
   final IconData? icon;
+  final Color iconColor;
   //padding
   final double paddingHorizontal;
   final double paddingVertical;
@@ -32,7 +33,9 @@ class AppButtons extends StatelessWidget {
     required this.fontSize,
     required this.fontWeight,
     //icon
-    this.icon,
+    required this.icon,
+    required this.iconColor,
+
     //padding
     required this.paddingHorizontal,
     required this.paddingVertical,
@@ -44,21 +47,36 @@ class AppButtons extends StatelessWidget {
       width: width,
       height: height,
       padding: EdgeInsets.symmetric(
-          horizontal: paddingHorizontal, vertical: paddingVertical),
+        horizontal: paddingHorizontal,
+        vertical: paddingVertical,
+      ),
       decoration: BoxDecoration(
         color: backgroundColor,
         borderRadius: BorderRadius.circular(borderRadius),
-        border: Border.all(color: borderColor, width: borderWidth),
-      ),
-      child: Center(
-        child: Text(
-          text,
-          style: TextStyle(
-            color: textColor,
-            fontSize: fontSize,
-            letterSpacing: 1.0,
-          ),
+        border: Border.all(
+          color: borderColor,
+          width: borderWidth,
         ),
+      ),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Text(
+            text,
+            style: TextStyle(
+              color: textColor,
+              fontSize: fontSize,
+              letterSpacing: 1.0,
+            ),
+          ),
+          const SizedBox(width: 12),
+          Icon(
+            icon,
+            color: iconColor,
+            size: 20,
+          ),
+        ],
       ),
     );
   }

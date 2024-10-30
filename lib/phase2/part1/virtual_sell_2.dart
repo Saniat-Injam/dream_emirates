@@ -143,7 +143,7 @@ class VirtualSellScreenState extends State<VirtualSellScreen> {
                       ],
                     ),
                     Column(
-                      children: const [
+                      children: [
                         Text(
                           "Weight",
                           style: TextStyle(
@@ -163,7 +163,7 @@ class VirtualSellScreenState extends State<VirtualSellScreen> {
                       ],
                     ),
                     Column(
-                      children: const [
+                      children: [
                         Text(
                           "QTY",
                           style: TextStyle(
@@ -277,7 +277,8 @@ class VirtualSellScreenState extends State<VirtualSellScreen> {
                           fontWeight: FontWeight.w500,
                         ),
                       ),
-                      Icon(Icons.arrow_forward, color: Colors.white),
+                      SizedBox(width: 12),
+                      Icon(Icons.keyboard_arrow_right, color: Colors.white),
                     ],
                   ),
                 ),

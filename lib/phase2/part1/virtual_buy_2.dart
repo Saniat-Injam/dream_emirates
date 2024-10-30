@@ -103,7 +103,7 @@ class VirtualBuyScreenState extends State<VirtualBuyScreen> {
               ),
               const SizedBox(height: 20),
 
-              // Info Card for Kilobar, Weight and QTY
+              // Card for Type, Weight and QTY
               Container(
                 padding: const EdgeInsets.all(8),
                 decoration: ShapeDecoration(
@@ -124,7 +124,7 @@ class VirtualBuyScreenState extends State<VirtualBuyScreen> {
                 child: Column(
                   children: [
                     Container(
-                      //padding: const EdgeInsets.symmetric(horizontal: ),
+                      padding: const EdgeInsets.all(8),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
@@ -212,41 +212,53 @@ class VirtualBuyScreenState extends State<VirtualBuyScreen> {
                         ],
                       ),
                     ),
-                    const SizedBox(height: 10),
 
                     // Straight line
-                    Container(
-                      decoration: const ShapeDecoration(
-                        color: Color(0x19111111),
-                        shape: RoundedRectangleBorder(
-                          side: BorderSide(
-                            width: 1,
-                            strokeAlign: BorderSide.strokeAlignCenter,
-                            color: Color(0x19111111),
-                          ),
-                        ),
-                      ),
-                    ),
-                    const SizedBox(height: 10),
+                    const Divider(),
+
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        ElevatedButton(
-                          onPressed: () {},
-                          style: ElevatedButton.styleFrom(
-                            backgroundColor: Colors.white,
-                            side: const BorderSide(color: Colors.blue),
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(20),
+                        Container(
+                          height: 24,
+                          width: 38,
+                          decoration: BoxDecoration(
+                            color: const Color(0x190088FF),
+                            borderRadius: BorderRadius.circular(12),
+                            border: Border.all(
+                              width: 0.5,
+                              color: const Color(0xFF0088FF),
                             ),
-                            padding: const EdgeInsets.symmetric(
-                                horizontal: 20, vertical: 10),
                           ),
-                          child: const Text(
-                            'Buy',
-                            style: TextStyle(color: Colors.blue),
+                          child: const Center(
+                            child: Text(
+                              "Buy",
+                              style: TextStyle(
+                                color: Color(0xFF0088FF),
+                                fontSize: 12,
+                                fontWeight: FontWeight.w400,
+                                height: 0.11,
+                              ),
+                            ),
                           ),
                         ),
+
+                        // ElevatedButton(
+                        //   onPressed: () {},
+                        //   style: ElevatedButton.styleFrom(
+                        //     //backgroundColor: const Color(0x190088FF),
+                        //     side: const BorderSide(color: Colors.blue),
+                        //     shape: RoundedRectangleBorder(
+                        //       borderRadius: BorderRadius.circular(20),
+                        //     ),
+                        //     padding: const EdgeInsets.symmetric(
+                        //         horizontal: 20, vertical: 10),
+                        //   ),
+                        //   child: const Text(
+                        //     'Buy',
+                        //     style: TextStyle(color: Colors.blue),
+                        //   ),
+                        // ),
                         Text(
                           'Jewelry 22K',
                           style: TextStyle(
@@ -451,6 +463,8 @@ class VirtualBuyScreenState extends State<VirtualBuyScreen> {
                 // padding
                 paddingHorizontal: 16,
                 paddingVertical: 12,
+                icon: Icons.keyboard_arrow_right,
+                iconColor: Colors.white,
               )
             ],
           ),
