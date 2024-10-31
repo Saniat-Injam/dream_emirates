@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
           child: InkWell(
             onTap: () {
               // Action when the container is tapped
-              print('Container tapped!');
+              //print('Container tapped!');
             },
             child: Container(
               height: 100,

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:dream_emirates/phase2/part2/pending_buy_1.dart';
-import 'package:dream_emirates/phase2/part2/pending_buy_2.dart';
+import 'package:dream_emirates/phase2/part2/e_pending_buy_info.dart';
+import 'package:dream_emirates/phase2/part2/f_pending_buy_confirm.dart';
 
 void main() {
   runApp(const TradingApp());

@@ -34,14 +34,15 @@ class VirtualBuyScreenState extends State<VirtualBuyScreen> {
       child: Scaffold(
         backgroundColor: const Color(0xFFF3F6FF),
         appBar: AppBar(
-          backgroundColor: Colors.transparent,
+          backgroundColor: Colors.white,
           elevation: 0,
           leading: IconButton(
-            icon: const Icon(Icons.arrow_back, color: Colors.black),
+            icon: const Icon(Icons.arrow_back,
+                color: Color.fromARGB(255, 37, 19, 19)),
             onPressed: () {},
           ),
           title: const Text(
-            'Virtual Sell',
+            'Virtual Buy',
             style: TextStyle(
               color: Colors.black,
               fontSize: 17,
@@ -68,7 +69,7 @@ class VirtualBuyScreenState extends State<VirtualBuyScreen> {
                       });
                     },
                     shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(4),
+                      borderRadius: BorderRadius.circular(6),
                     ),
                   ),
                   const Text("Info"),
@@ -91,7 +92,7 @@ class VirtualBuyScreenState extends State<VirtualBuyScreen> {
                       });
                     },
                     shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(4),
+                      borderRadius: BorderRadius.circular(6),
                     ),
                   ),
                   const Text("Confirm"),
@@ -103,10 +104,11 @@ class VirtualBuyScreenState extends State<VirtualBuyScreen> {
               const SizedBox(height: 8),
               DropdownButtonFormField<String>(
                 decoration: InputDecoration(
+                  fillColor: const Color(0xFFE8ECF9),
                   contentPadding: const EdgeInsets.symmetric(horizontal: 16),
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(12),
-                    borderSide: const BorderSide(color: Colors.black),
+                    borderSide: const BorderSide(width: 1, color: Colors.black),
                   ),
                 ),
                 hint: const Text("Select"),

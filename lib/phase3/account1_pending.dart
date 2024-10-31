@@ -294,21 +294,28 @@ class TradesPageState extends State<TradesPage> {
               _selectedIndex = index;
             });
           },
-          items: const [
+          items: [
             BottomNavigationBarItem(
-              icon: Icon(Icons.home),
+              //icon: Icon(Icons.home),
+              icon: Image.asset(
+                "images/home_logo.png",
+              ),
               label: 'Home',
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.account_circle),
+              //icon: Icon(Icons.account_circle),
+              icon: Image.asset("images/account_logo.png"),
+
               label: 'Account',
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.receipt_long),
+              //icon: Icon(Icons.receipt_long),
+              icon: Image.asset("images/trade_logo.png"),
               label: 'Trades',
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.more_horiz),
+              //icon: Icon(Icons.more_horiz),
+              icon: Image.asset("images/more_logo.png"),
               label: 'More',
             ),
           ],
